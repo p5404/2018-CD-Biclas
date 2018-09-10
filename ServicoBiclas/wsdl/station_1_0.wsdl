@@ -49,34 +49,34 @@
             </xs:complexType>
             <xs:element name="getInfoResponse" type="tns:getInfoResponse" />
 
-            <xs:complexType name="getBina">
+            <xs:complexType name="getBicla">
                 <xs:sequence />
             </xs:complexType>
-            <xs:element name="getBina" type="tns:getBina" />
+            <xs:element name="getBicla" type="tns:getBicla" />
 
-            <xs:complexType name="getBinaResponse">
+            <xs:complexType name="getBiclaResponse">
                 <xs:sequence />
             </xs:complexType>
-            <xs:element name="getBinaResponse" type="tns:getBinaResponse" />
+            <xs:element name="getBiclaResponse" type="tns:getBiclaResponse" />
 
-            <xs:complexType name="returnBina">
+            <xs:complexType name="returnBicla">
                 <xs:sequence />
             </xs:complexType>
-            <xs:element name="returnBina" type="tns:returnBina" />
+            <xs:element name="returnBicla" type="tns:returnBicla" />
 
-            <xs:complexType name="returnBinaResponse">
+            <xs:complexType name="returnBiclaResponse">
                 <xs:sequence>
-                    <xs:element name="returnBina" type="xs:int" />
+                    <xs:element name="returnBicla" type="xs:int" />
                 </xs:sequence>
             </xs:complexType>
-            <xs:element name="returnBinaResponse" type="tns:returnBinaResponse" />
+            <xs:element name="returnBiclaResponse" type="tns:returnBiclaResponse" />
 
-            <xs:complexType name="NoBinaAvail">
+            <xs:complexType name="NoBiclaAvail">
                 <xs:sequence>
                     <xs:element name="message" type="xs:string" minOccurs="0" />
                 </xs:sequence>
             </xs:complexType>
-            <xs:element name="NoBinaAvail" type="tns:NoBinaAvail" />
+            <xs:element name="NoBiclaAvail" type="tns:NoBiclaAvail" />
 
             <xs:complexType name="NoSlotAvail">
                 <xs:sequence>
@@ -148,25 +148,25 @@
         <part name="parameters" element="tns:getInfoResponse" />
     </message>
 
-    <message name="getBina">
-        <part name="parameters" element="tns:getBina" />
+    <message name="getBicla">
+        <part name="parameters" element="tns:getBicla" />
     </message>
-    <message name="getBinaResponse">
-        <part name="parameters" element="tns:getBinaResponse" />
+    <message name="getBiclaResponse">
+        <part name="parameters" element="tns:getBiclaResponse" />
     </message>
 
-    <message name="returnBina">
-        <part name="parameters" element="tns:returnBina" />
+    <message name="returnBicla">
+        <part name="parameters" element="tns:returnBicla" />
     </message>
-    <message name="returnBinaResponse">
-        <part name="parameters" element="tns:returnBinaResponse" />
+    <message name="returnBiclaResponse">
+        <part name="parameters" element="tns:returnBiclaResponse" />
     </message>
 
     <message name="NoSlotAvail">
         <part name="fault" element="tns:NoSlotAvail" />
     </message>
-    <message name="NoBinaAvail">
-        <part name="fault" element="tns:NoBinaAvail" />
+    <message name="NoBiclaAvail">
+        <part name="fault" element="tns:NoBiclaAvail" />
     </message>
 
     <!-- test control messages -->
@@ -206,22 +206,22 @@
                 message="tns:getInfoResponse" />
         </operation>
 
-        <operation name="getBina">
-            <input wsam:Action="http://ws.station.biclas.org/Station/getBinaRequest"
-                message="tns:getBina" />
-            <output wsam:Action="http://ws.station.biclas.org/Station/getBinaResponse"
-                message="tns:getBinaResponse" />
-            <fault message="tns:NoBinaAvail" name="NoBinaAvail"
-                wsam:Action="http://ws.station.biclas.org/Station/getBina/Fault/NoBinaAvail" />
+        <operation name="getBicla">
+            <input wsam:Action="http://ws.station.biclas.org/Station/getBiclaRequest"
+                message="tns:getBicla" />
+            <output wsam:Action="http://ws.station.biclas.org/Station/getBiclaResponse"
+                message="tns:getBiclaResponse" />
+            <fault message="tns:NoBiclaAvail" name="NoBiclaAvail"
+                wsam:Action="http://ws.station.biclas.org/Station/getBicla/Fault/NoBiclaAvail" />
         </operation>
 
-        <operation name="returnBina">
-            <input wsam:Action="http://ws.station.biclas.org/Station/returnBinaRequest"
-                message="tns:returnBina" />
-            <output wsam:Action="http://ws.station.biclas.org/Station/returnBinaResponse"
-                message="tns:returnBinaResponse" />
+        <operation name="returnBicla">
+            <input wsam:Action="http://ws.station.biclas.org/Station/returnBiclaRequest"
+                message="tns:returnBicla" />
+            <output wsam:Action="http://ws.station.biclas.org/Station/returnBiclaResponse"
+                message="tns:returnBiclaResponse" />
             <fault message="tns:NoSlotAvail" name="NoSlotAvail"
-                wsam:Action="http://ws.station.biclas.org/Station/returnBina/Fault/NoSlotAvail" />
+                wsam:Action="http://ws.station.biclas.org/Station/returnBicla/Fault/NoSlotAvail" />
         </operation>
 
         <!-- test control operations -->
@@ -265,7 +265,7 @@
             </output>
         </operation>
 
-        <operation name="getBina">
+        <operation name="getBicla">
             <soap:operation soapAction="" />
             <input>
                 <soap:body use="literal" />
@@ -273,12 +273,12 @@
             <output>
                 <soap:body use="literal" />
             </output>
-            <fault name="NoBinaAvail">
-                <soap:fault name="NoBinaAvail" use="literal" />
+            <fault name="NoBiclaAvail">
+                <soap:fault name="NoBiclaAvail" use="literal" />
             </fault>
         </operation>
 
-        <operation name="returnBina">
+        <operation name="returnBicla">
             <soap:operation soapAction="" />
             <input>
                 <soap:body use="literal" />
